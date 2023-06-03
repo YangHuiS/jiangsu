@@ -69,7 +69,7 @@ with col1:
                  y="得分",  # y轴
                  color="团队",  # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
-                 title=f'任务：{tasks[0]}',
+                 title=f'任务：{tasks[0]}',color_continuous_scale=px.colors.diverging.Tealrose
                  )
     st.plotly_chart(fig, use_container_width=True)
 
@@ -83,7 +83,7 @@ with col2:
                  y="得分",  # y轴
                  color="团队",  # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
-                 title=f'任务：{tasks[1]}',
+                 title=f'任务：{tasks[1]}',color_continuous_scale=px.colors.diverging.Tealrose
                  )
     st.plotly_chart(fig, use_container_width=True)
 
@@ -97,7 +97,7 @@ with col1:
                  y="得分",  # y轴
                  color="团队",   # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
-                 title=f'任务：{tasks[2]}',
+                 title=f'任务：{tasks[2]}',color_continuous_scale=px.colors.diverging.Tealrose
                  )
     st.plotly_chart(fig, use_container_width=True)
 
@@ -110,7 +110,7 @@ with col2:
                  y="得分",  # y轴
                  color="团队",  # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
-                 title=f'任务：{tasks[3]}',
+                 title=f'任务：{tasks[3]}',color_continuous_scale=px.colors.diverging.Tealrose
                  )
     st.plotly_chart(fig, use_container_width=True)
 
@@ -123,7 +123,7 @@ with col3:
                  y="得分",  # y轴
                  color="团队",  # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
-                 title=f'任务：{tasks[4]}',
+                 title=f'任务：{tasks[4]}',color_continuous_scale=px.colors.diverging.Tealrose
                  )
     st.plotly_chart(fig, use_container_width=True)
 
