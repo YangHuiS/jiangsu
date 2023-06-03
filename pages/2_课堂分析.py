@@ -89,7 +89,7 @@ with col2:
      
 with col3:
     # 任务二
-    df = scores0.groupby('团队').tail(4)
+    df = score0.groupby('团队').tail(4)
     df['得分'] = [np.random.randint(70, 79) for i in range(df.shape[0])]
     df = df.sort_values(['团队', '得分'], ascending=True)
     fig = px.bar(df,  # 带绘图数据
