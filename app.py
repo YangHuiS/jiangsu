@@ -48,7 +48,7 @@ if 'first_visit' not in st.session_state:
 else:
     st.session_state.first_visit = False
 
-# app = mt.MultiPage()
+app = mt.MultiPage()
 # app.add("课程信息", p1.run)
 # app.add("学生评价", p2.run)
 # #app.run_radio('课程信息')
