@@ -5,12 +5,6 @@ import plotly.graph_objects as go
 from streamlit.elements.image import image_to_url
 import plotly.figure_factory as ff
 import numpy as np
-st.set_page_config(
-     page_title="教学评价系统",
-     page_icon="🧊",
-     layout="wide",    # 'wide' or 'centered'
-     initial_sidebar_state="expanded",
- )
 
 #加载背景图（本地图片先转url，网页图片就直接给图片的链接）
 img_url = image_to_url('back.png', width=-3, clamp=False,
