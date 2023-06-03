@@ -61,7 +61,7 @@ scores = pd.DataFrame({
     '得分': [np.random.randint(50, 70) for i in students]
 }).sort_values(['团队', '得分'], ascending=True)
 
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 with col1:
     # 任务一
     fig = px.bar(scores,  # 带绘图数据
@@ -75,15 +75,29 @@ with col1:
 
 with col2:
     # 任务二
-    df = scores.groupby('团队').tail(4)
-    df['得分'] = [np.random.randint(60, 75) for i in range(df.shape[0])]
+    score0 = scores.groupby('团队').tail(5)
+    score0['得分'] = [np.random.randint(65, 75) for i in range(score0.shape[0])]
+    score0 = score0.sort_values(['团队', '得分'], ascending=True)
+    fig = px.bar(score0,  # 带绘图数据
+                 x="姓名",  # x轴
+                 y="得分",  # y轴
+                 color="团队",  # 颜色设置
+                 barmode="group",  # 柱状图4种模式之一
+                 title=f'任务：{tasks[1]}',color_continuous_scale=px.colors.diverging.Tealrose
+                 )
+    st.plotly_chart(fig, use_container_width=True)
+     
+with col3:
+    # 任务二
+    df = scores0.groupby('团队').tail(4)
+    df['得分'] = [np.random.randint(70, 79) for i in range(df.shape[0])]
     df = df.sort_values(['团队', '得分'], ascending=True)
     fig = px.bar(df,  # 带绘图数据
                  x="姓名",  # x轴
                  y="得分",  # y轴
                  color="团队",  # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
-                 title=f'任务：{tasks[1]}',color_continuous_scale=px.colors.diverging.Tealrose
+                 title=f'任务：{tasks[2]}',color_continuous_scale=px.colors.diverging.Tealrose
                  )
     st.plotly_chart(fig, use_container_width=True)
 
@@ -97,7 +111,7 @@ with col1:
                  y="得分",  # y轴
                  color="团队",   # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
-                 title=f'任务：{tasks[2]}',color_continuous_scale=px.colors.diverging.Tealrose
+                 title=f'任务：{tasks[3]}',color_continuous_scale=px.colors.diverging.Tealrose
                  )
     st.plotly_chart(fig, use_container_width=True)
 
@@ -110,7 +124,7 @@ with col2:
                  y="得分",  # y轴
                  color="团队",  # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
-                 title=f'任务：{tasks[3]}',color_continuous_scale=px.colors.diverging.Tealrose
+                 title=f'任务：{tasks[4]}',color_continuous_scale=px.colors.diverging.Tealrose
                  )
     st.plotly_chart(fig, use_container_width=True)
 
@@ -123,7 +137,7 @@ with col3:
                  y="得分",  # y轴
                  color="团队",  # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
-                 title=f'任务：{tasks[4]}',color_continuous_scale=px.colors.diverging.Tealrose
+                 title=f'任务：{tasks[5]}',color_continuous_scale=px.colors.diverging.Tealrose
                  )
     st.plotly_chart(fig, use_container_width=True)
 
