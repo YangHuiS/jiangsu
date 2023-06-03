@@ -3,7 +3,7 @@
 # import page2 as p2
 import streamlit as st
 from streamlit.elements.image import image_to_url
-from streamlit.server.server import Server
+# from streamlit.server.server import Server
 
 st.set_page_config(
      page_title="教学评价系统",
@@ -24,24 +24,24 @@ st.markdown('''
 
 # st.markdown('# 教学评价系统')
 st.markdown("<h1 style='text-align: center; color: grey;'>教学评价系统</h1>", unsafe_allow_html=True)
-# st.sidebar.markdown('# :house:首页')
-# st.sidebar.markdown('# :book:课程信息')
-# st.sidebar.markdown('''
-# - 课程任务点
-# - 章节学习
-# - 教学预警
-# ''')
-# st.sidebar.markdown('# :book:课程报表')
-# st.sidebar.markdown('''
-# - 课堂活动
-# - 课堂积分
-# - 教师评价
-# - 学生评价
-# - 作业统计
-# - 考试统计
-# - 课程分析报表
-# ''')
-# st.sidebar.markdown('# :book:信息管理')
+st.sidebar.markdown('# :house:首页')
+st.sidebar.markdown('# :book:课程信息')
+st.sidebar.markdown('''
+- 课程任务点
+- 章节学习
+- 教学预警
+''')
+st.sidebar.markdown('# :book:课程报表')
+st.sidebar.markdown('''
+- 课堂活动
+- 课堂积分
+- 教师评价
+- 学生评价
+- 作业统计
+- 考试统计
+- 课程分析报表
+''')
+st.sidebar.markdown('# :book:信息管理')
 #
 # if 'first_visit' not in st.session_state:
 #     st.session_state.first_visit = True
