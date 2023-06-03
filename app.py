@@ -51,7 +51,7 @@ else:
 app = mt.MultiPage()
 app.add("课程信息", p1.run)
 app.add("学生评价", p2.run)
-app.run_radio('经济大数据')
+app.run_radio('课程信息')
 
 sessions = Server.get_current()._session_info_by_id
 st.sidebar.info(f'当前在线人数：{len(sessions)}')
