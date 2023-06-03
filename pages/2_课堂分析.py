@@ -24,7 +24,7 @@ st.set_page_config(
 # ''', unsafe_allow_html=True)
 
 # st.markdown('# 教学评价系统')
-st.markdown("<h1 style='text-align: center; color: white;'>教学评价系统</h1>", unsafe_allow_html=True)
+# st.markdown("<h1 style='text-align: center; color: white;'>教学评价系统</h1>", unsafe_allow_html=True)
 st.sidebar.markdown('# :house:首页')
 st.sidebar.markdown('# :book:课程信息')
 st.sidebar.markdown('''
