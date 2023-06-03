@@ -3,7 +3,7 @@ import streamlit as st
 import plotly_express as px
 from multipage_streamlit import State
 import plotly.graph_objects as go
-from streamlit.elements.image import image_to_url
+# from streamlit.elements.image import image_to_url
 import plotly.figure_factory as ff
 import numpy as np
 #
@@ -14,15 +14,15 @@ import numpy as np
 #      initial_sidebar_state="expanded",
 #  )
 
-#加载背景图（本地图片先转url，网页图片就直接给图片的链接）
-img_url = image_to_url('back.png', width=-3, clamp=False,
-                       channels='RGB', output_format='auto', image_id='',
-                       allow_emoji=False)
-# 通过markdown加载背景图（可以是动图、静图）
-st.markdown('''
-<style>
-.css-fg4pbf {background-image: url(''' + img_url + ''');}</style>
-''', unsafe_allow_html=True)
+# #加载背景图（本地图片先转url，网页图片就直接给图片的链接）
+# img_url = image_to_url('back.png', width=-3, clamp=False,
+#                        channels='RGB', output_format='auto', image_id='',
+#                        allow_emoji=False)
+# # 通过markdown加载背景图（可以是动图、静图）
+# st.markdown('''
+# <style>
+# .css-fg4pbf {background-image: url(''' + img_url + ''');}</style>
+# ''', unsafe_allow_html=True)
 def main():
     # st.markdown('# 教学评价系统')
     st.markdown("<h1 style='text-align: center; color: grey;'>教学评价系统</h1>", unsafe_allow_html=True)
