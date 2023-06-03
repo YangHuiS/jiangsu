@@ -12,7 +12,7 @@ st.set_page_config(
      layout="wide",    # 'wide' or 'centered'
      initial_sidebar_state="expanded",
  )
-
+c = ['rgb(187,174,255,0.5)', 'rgb(119,93,254,0.5)', 'rgb(84,51,253,0.5)', 'rgb(0,0,250,0.5)']
 # #加载背景图（本地图片先转url，网页图片就直接给图片的链接）
 # img_url = image_to_url('back.png', width=-3, clamp=False,
 #                        channels='RGB', output_format='auto', image_id='',
@@ -67,7 +67,7 @@ with col1:
     fig = px.bar(scores,  # 带绘图数据
                  x="姓名",  # x轴
                  y="得分",  # y轴
-                 color="团队",  # 颜色设置
+                 color=c,  # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
                  title=f'任务：{tasks[0]}',
                  )
@@ -81,7 +81,7 @@ with col2:
     fig = px.bar(df,  # 带绘图数据
                  x="姓名",  # x轴
                  y="得分",  # y轴
-                 color="团队",  # 颜色设置
+                 color=c,#"团队",  # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
                  title=f'任务：{tasks[1]}',
                  )
@@ -95,7 +95,7 @@ with col1:
     fig = px.bar(df2,  # 带绘图数据
                  x="姓名",  # x轴
                  y="得分",  # y轴
-                 color="团队",  # 颜色设置
+                 color=c,#"团队",   # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
                  title=f'任务：{tasks[2]}',
                  )
@@ -108,7 +108,7 @@ with col2:
     fig = px.bar(df3,  # 带绘图数据
                  x="姓名",  # x轴
                  y="得分",  # y轴
-                 color="团队",  # 颜色设置
+                 color=c,#"团队",  # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
                  title=f'任务：{tasks[3]}',
                  )
