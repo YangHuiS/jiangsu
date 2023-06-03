@@ -48,12 +48,12 @@ st.sidebar.markdown('# :book:信息管理')
 # else:
 #     st.session_state.first_visit = False
 #
-# st.markdown('Hello')
+st.markdown("<h1 style='text-align: center; color: grey;'>Welcome</h1>", unsafe_allow_html=True)
 # # app = mt.MultiPage()
 # # app.add_app("课程信息", p1.run)
 # # app.add_app("学生评价", p2.run)
 # # # app.run_radio('经济大数据')
 # # app.run()
-#
+st.balloons()
 # sessions = Server.get_current()._session_info_by_id
 # st.sidebar.info(f'当前在线人数：{len(sessions)}')
