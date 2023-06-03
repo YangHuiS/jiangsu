@@ -67,7 +67,7 @@ with col1:
     fig = px.bar(scores,  # 带绘图数据
                  x="姓名",  # x轴
                  y="得分",  # y轴
-                 color=c,  # 颜色设置
+                 color="团队",  # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
                  title=f'任务：{tasks[0]}',
                  )
@@ -81,7 +81,7 @@ with col2:
     fig = px.bar(df,  # 带绘图数据
                  x="姓名",  # x轴
                  y="得分",  # y轴
-                 color=c,#"团队",  # 颜色设置
+                 color="团队",  # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
                  title=f'任务：{tasks[1]}',
                  )
@@ -95,7 +95,7 @@ with col1:
     fig = px.bar(df2,  # 带绘图数据
                  x="姓名",  # x轴
                  y="得分",  # y轴
-                 color=c,#"团队",   # 颜色设置
+                 color="团队",   # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
                  title=f'任务：{tasks[2]}',
                  )
@@ -108,7 +108,7 @@ with col2:
     fig = px.bar(df3,  # 带绘图数据
                  x="姓名",  # x轴
                  y="得分",  # y轴
-                 color=c,#"团队",  # 颜色设置
+                 color="团队",  # 颜色设置
                  barmode="group",  # 柱状图4种模式之一
                  title=f'任务：{tasks[3]}',
                  )
