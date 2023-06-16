@@ -66,7 +66,8 @@ with col1:
                           # orientation='h',
                           name='后测',
                           text=df['after'],  # 显示number的数据信息
-                          marker={'color': 'blue'},
+                          # marker={'color': 'rgb(119,93,254,0.5)'},
+                          marker_color='rgb(158,202,225)', 
                           textposition="outside"  # ['inside', 'outside', 'auto', 'none']
                           ))
     fig1.update_layout(barmode='group', title_text='小组前测和后测考核',)
@@ -94,7 +95,8 @@ with col2:
                           name='二轮',
                           text=df['after'],  # 显示number的数据信息
                           textposition="outside",  # ['inside', 'outside', 'auto', 'none']
-                          marker={'color': 'blue'}
+                          # marker={'color': 'rgb(119,93,254)'}
+                          marker_color='rgb(158,202,225)', 
                           ))
     fig1.update_layout(barmode='group', title_text='能力目标首轮和二轮考核', )
     st.plotly_chart(fig1, use_container_width=True)
@@ -133,7 +135,9 @@ fig1 = go.Figure()
 fig1.add_trace(go.Bar(x=df['name'], y=df['before'], text=df['before'], name='首测', textposition="outside",
                       ))
 fig1.add_trace(go.Bar(x=df['name'], y=df['after'], text=df['after'], name='二测', textposition="outside",
-                      marker={'color': 'blue'}))
+                      # marker={'color': 'rgb(119,93,254,0.5)'},
+                      marker_color='rgb(158,202,225)', 
+                     ))
 # fig1.update_layout(showlegend=False)
 fig1.update_layout(title_text='学生训练评分')
 st.plotly_chart(fig1, use_container_width=True)
