@@ -13,6 +13,8 @@ st.set_page_config(
      layout="wide",    # 'wide' or 'centered'
      initial_sidebar_state="expanded",
  )
+d = [np.random.randint(60, 85) for i in range(24)]
+d2 = [np.random.randint(70, 95) for i in range(24)]
 
 # #加载背景图（本地图片先转url，网页图片就直接给图片的链接）
 # img_url = image_to_url('back.png', width=-3, clamp=False,
@@ -51,7 +53,7 @@ with col1:
     # st.markdown(':star:**小组考核**')
     df = pd.DataFrame({
         'name': ['第一组', '第二组', '第三组', '第四组'],
-        'before': [60, 64, 74, 76],
+        'before': [np.mean(d[6*i:6*(i+1)]) for i in range(4)],  # [80, 74, 74, 76],
         'after': [85, 90, 84, 80]
     })
     df.sort_index(inplace=True)
@@ -78,7 +80,7 @@ with col2:
         'name': ['林海股份经营目标和评价指标', '营业收入的可视化与评价', '成本费用的可视化与评价',
                  '偿债能力的可视化与评价', '营运能力的可视化与评价', '盈利能力的可视化与评价', '发展能力的可视化与评价',
                  ' 财务分析报告撰写'],
-        'before': [60, 65, 66, 73, 75, 70, 72, 75],
+        'before': [60, 65, 66, 73, 75, 73, 78, 83],
         'after': [70, 80, 84, 81, 87, 88, 85, 90]
     })
     df.sort_index(ascending=False, inplace=True)
@@ -124,8 +126,6 @@ with col3:
     st.plotly_chart(fig3, use_container_width=True)
 
 # st.markdown(':star:首轮训练评分')
-d = [np.random.randint(60, 85) for i in range(24)]
-d2 = [np.random.randint(70, 95) for i in range(24)]
 
 df = pd.DataFrame({
     'name': '崔耀 郁磊 刘枫 张文莉 刘畅 王盈盈 王甜甜 高思雨 程梦 陈甜甜 王丹 丁亚男 许兰馨 刘星宇 王静怡 程玉珠 葛玚 王帅翔 陈熙贤 史喻航 陈杨 周圆圆 叶宇凡 葛文静'.split(),
