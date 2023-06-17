@@ -15,7 +15,7 @@ st.set_page_config(
  )
 np.random.seed(1)
 d = [np.random.randint(60, 85) for i in range(24)]
-d2 = [np.random.randint(70, 87) for i in range(24)]
+d2 = [np.random.randint(75, 90) for i in range(24)]
 do = [max(d[i]+5, d2[i])for i in range(24)]
 
 # st.markdown('# 教学评价系统')
