@@ -53,7 +53,7 @@ with col1:
     # st.markdown(':star:**小组考核**')
     df = pd.DataFrame({
         'name': ['第一组', '第二组', '第三组', '第四组'],
-        'before': [np.mean(d[6*i:6*(i+1)]) for i in range(4)],  # [80, 74, 74, 76],
+        'before': [int(np.mean(d[6*i:6*(i+1)])) for i in range(4)],  # [80, 74, 74, 76],
         'after': [85, 90, 84, 80]
     })
     df.sort_index(inplace=True)
