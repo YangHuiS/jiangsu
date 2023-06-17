@@ -15,7 +15,7 @@ st.set_page_config(
  )
 np.random.seed(1)
 d = [np.random.randint(60, 85) for i in range(24)]
-d2 = [np.random.randint(75, 90) for i in range(24)]
+d2 = [np.random.randint(87, 95) for i in range(4)] + [np.random.randint(80, 90) for i in range(20)]
 do = [max(d[i]+5, d2[i])for i in range(24)]
 
 # st.markdown('# 教学评价系统')
@@ -72,8 +72,8 @@ with col2:
         'name': ['林海股份经营目标和评价指标', '营业收入的可视化与评价', '成本费用的可视化与评价',
                  '偿债能力的可视化与评价', '营运能力的可视化与评价', '盈利能力的可视化与评价', '发展能力的可视化与评价',
                  ' 财务分析报告撰写'],
-        'before': [60, 65, 66, 73, 75, 73, 78, 83],
-        'after': [70, 80, 84, 81, 87, 88, 85, 90]
+        'before': [60, 65, 66, 73, 75, 73, 78, 70],
+        'after': [70, 80, 84, 81, 87, 88, 85, 76]
     })
     df.sort_index(ascending=False, inplace=True)
     fig1 = go.Figure()
