@@ -110,16 +110,16 @@ with col3:
         '第一组': [4, 5, 5, 5, 4], '第二组': [5, 4, 3, 3, 5], '第三组': [3, 5, 3, 1, 4],
         '第四组': [4, 2, 3, 1, 4],  # 'five': [4, 1, 3, 2, 4],
     })
-    d = []
+    d3 = []
     c = ['rgb(187,174,255,0.8)', 'rgb(119,93,254,0.8)', 'rgb(84,51,253,0.8)', 'rgb(150,202,225,0.8)']
     for i, name in enumerate(['第一组', '第二组', '第三组', '第四组']):
-        d.append(
+        d3.append(
             go.Scatterpolar(theta=df['name'], r=df[name],
                             # mode='lines',
                             mode='lines+text+markers',
                             name=name, fillcolor=c[i])
         )
-    fig3 = go.Figure(data=d)
+    fig3 = go.Figure(data=d3)
     # 颜色填充
     fig3.update_traces(fill='toself',)
     fig3.update_layout(title_text='技能目标前测和后测考核')
