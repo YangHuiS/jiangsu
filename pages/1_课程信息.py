@@ -16,6 +16,7 @@ st.set_page_config(
 np.random.seed(1)
 d = [np.random.randint(60, 85) for i in range(24)]
 d2 = [np.random.randint(70, 95) for i in range(24)]
+do = [max(d[i]+5, d2[i])for i in range(24)]
 
 # st.markdown('# 教学评价系统')
 # st.markdown("<h1 style='text-align: center; color: grey;'>教学评价系统</h1>", unsafe_allow_html=True)
@@ -42,7 +43,6 @@ st.sidebar.markdown('# :book:信息管理')
 col1, col2, col3 = st.columns([2, 3, 2])
 with col1:
     # st.markdown(':star:**小组考核**')
-     do = [max(d[i]+5, d2[i])for i in range(24)]
     df = pd.DataFrame({
         'name': ['第一组', '第二组', '第三组', '第四组'],
         'before': [int(np.mean(d[6*i:6*(i+1)])) for i in range(4)],  # [80, 74, 74, 76],
