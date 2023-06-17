@@ -13,6 +13,7 @@ st.set_page_config(
      layout="wide",    # 'wide' or 'centered'
      initial_sidebar_state="expanded",
  )
+np.random.seed(123)
 d = [np.random.randint(60, 85) for i in range(24)]
 d2 = [np.random.randint(70, 95) for i in range(24)]
 
