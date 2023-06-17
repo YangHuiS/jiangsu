@@ -14,7 +14,7 @@ st.set_page_config(
      initial_sidebar_state="expanded",
  )
 np.random.seed(1)
-d = [np.random.randint(60, 85) for i in range(24)]
+d = [np.random.randint(65, 85) for i in range(24)]
 d2 = [np.random.randint(87, 95) for i in range(4)] + [np.random.randint(80, 90) for i in range(20)]
 do = [max(d[i]+5, d2[i])for i in range(24)]
 
